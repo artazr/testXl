@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<udm.DeploymentPackage version="TOREPLACE" application="MyTest">
+  <deployables>
+    <file.File name="index" file="index.php">
+      <targetPath>/var/www/html/</targetPath>
+      <targetFileName>index.php</targetFileName>
+    </file.File>
+  </deployables>
+</udm.DeploymentPackage>
