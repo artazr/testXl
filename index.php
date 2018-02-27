@@ -54,7 +54,7 @@ body {background-color: white;}
 	<div class="myDiv">
 	Bienvenue sur la nouvelle application de test POC DCE en cours de modification ... 
 	<br/>
-	Bonjour à tous, c'est alexandre
+	Bonjour à tous, c'est alexandre m
 	</div>
 </div>
 </body>
