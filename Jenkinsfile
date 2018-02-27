@@ -21,7 +21,8 @@ pipeline {
 				if ( targetEnv == 'dua' ) {
 					echo 'Building..'
 					sh "tar -czvf mytest-1.1.${BUILD_NUMBER}.tar.gz index.php"
-			    	}  
+			    	}
+				sh "./sendevent.sh -d MyTestDomain -a MyTest -v 1.1.${BUILD_NUMBER} -e build_success"    
 			}
 		}
         }
