@@ -22,7 +22,7 @@ pipeline {
 					echo 'Building..'
 					sh "tar -czvf mytest-1.1.${BUILD_NUMBER}.tar.gz index.php"
 			    	}
-				sh "./sendevent.sh -d MyTestDomain -a MyTest -v 1.1.${BUILD_NUMBER} -e build_success"    
+				    
 			}
 		}
         }
@@ -30,7 +30,7 @@ pipeline {
         stage('package') {
             steps {
                 echo 'packaging xldeploy'
-                sh "sed -i 's/TOREPLACE/1.1.${BUILD_NUMBER}/g' deployit-manifest.xml"
+                
                 archiveArtifacts artifacts: 'deployit-manifest.xml'
                 archiveArtifacts artifacts: 'index.php'
                 xldCreatePackage artifactsPath: '.', manifestPath: 'deployit-manifest.xml', darPath: 'mytest-1.1.${BUILD_NUMBER}.dar'
