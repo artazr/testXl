@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<udm.DeploymentPackage version="TOREPLACE" application="MyTest">
+<udm.DeploymentPackage version="TOREPLACE" application="testXl">
   <deployables>
     <file.File name="index" file="index.php">
       <targetPath>/var/www/html/</targetPath>
