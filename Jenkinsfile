@@ -48,7 +48,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                xldDeploy serverCredentials: 'cred-xld', environmentId: 'Environments/DUA', packageId: 'Applications/MyTest/1.1.${BUILD_NUMBER}'
+                xldDeploy serverCredentials: 'cred-xld', environmentId: 'Environments/DUA', packageId: 'Applications/TestXLR/1.1.${BUILD_NUMBER}'
             }
         }
     }
