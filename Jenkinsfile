@@ -29,7 +29,7 @@ pipeline {
         stage('package') {
             steps {
                 echo 'packaging xldeploy'
-                sh "sed -i 's/TOREPLACE/1.1.${BUILD_NUMBER}/g' deployit-manifest.xml"
+                sh "sed -i '' 's/TOREPLACE/1.1.${BUILD_NUMBER}/g' deployit-manifest.xml"
                 archiveArtifacts artifacts: 'deployit-manifest.xml'
                 archiveArtifacts artifacts: 'index.php'
                 xldCreatePackage artifactsPath: '.', manifestPath: 'deployit-manifest.xml', darPath: 'testxlr-1.1.${BUILD_NUMBER}.dar'
